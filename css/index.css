@@ -1,0 +1,110 @@
+@import url("/css/reset.css");
+@import url("/css/icons.css");
+
+:root {
+	--black-100: #0a0a0a;
+	--black-200: #333333;
+	--black-300: #595959;
+
+	--black-100-50: #0a0a0a80;
+	--black-200-50: #33333380;
+	--black-300-50: #59595980;
+
+	--white-100: #fafafa;
+	--white-200: #d9d9d9;
+	--white-300: #a6a6a6;
+
+	--white-100-50: #fafafa80;
+	--white-200-50: #d9d9d980;
+	--white-300-50: #a6a6a680;
+
+	--xxs: 0.1875rem;
+	--xs: 0.25rem;
+	--sm: 0.5rem;
+	--md: 1rem;
+	--lg: 1.5rem;
+	--xl: 2.5rem;
+	--xxl: 4rem;
+}
+
+body {
+	color: var(--black-100);
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
+}
+
+header {
+	background-color: var(--white-100-50);
+	position: fixed;
+	top: var(--md);
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50%;
+	border-radius: var(--md);
+	box-shadow: 0 var(--xs) var(--sm) calc(var(--xs) * -1) var(--black-100);
+
+	backdrop-filter: blur(var(--md));
+	z-index: 1;
+}
+
+nav {
+	padding: var(--sm) var(--md);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header a {
+	display: flex;
+	align-items: center;
+	position: relative;
+	transition: 0.2s ease-in-out;
+}
+
+header a:hover,
+header i:hover {
+	scale: 1.05;
+	filter: drop-shadow(0 0 var(--xs) var(--black-300));
+}
+
+nav > div {
+	gap: var(--md);
+	display: flex;
+	align-items: center;
+}
+
+.header-user {
+	display: flex;
+	align-items: center;
+	gap: var(--xs);
+}
+
+.header-user p {
+	line-height: 1;
+}
+
+header i {
+	width: var(--lg);
+	height: var(--lg);
+}
+
+@media (max-width: 768px) {
+	header {
+		top: var(--sm);
+		width: 95%;
+	}
+
+	.header-user p {
+		display: none;
+	}
+}

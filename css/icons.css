@@ -1,0 +1,15 @@
+.icon-user {
+	display: inline-block;
+	background-color: currentColor;
+	-webkit-mask: url("/images/user.svg") no-repeat center / contain;
+	mask: url("/images/user.svg") no-repeat center / contain;
+	cursor: pointer;
+}
+
+.icon-cart {
+	display: inline-block;
+	background-color: currentColor;
+	-webkit-mask: url("/images/cart.svg") no-repeat center / contain;
+	mask: url("/images/cart.svg") no-repeat center / contain;
+	cursor: pointer;
+}
