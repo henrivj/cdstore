@@ -132,7 +132,7 @@ function loadProducts() {
 					<div class="card-details">
 						<div>
 							<p>${p.band}</p>
-							<p>R$ <span class="price">${p.price.toFixed(2)}</span></p>
+							<p>R$ <span>${p.price.toFixed(2)}</span></p>
 						</div>
 						<i class="icon-add-to-cart"></i>
 					</div>
