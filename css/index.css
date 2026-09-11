@@ -98,24 +98,16 @@ header i {
 	height: var(--lg);
 }
 
-@media (max-width: 768px) {
-	header {
-		top: var(--sm);
-		width: 95%;
-	}
-
-	.header-user p {
-		display: none;
-	}
-}
-
 main {
 	display: flex;
 	justify-content: center;
+	margin-top: calc(var(--xxl) * 2);
 }
 
 section {
 	display: flex;
+	width: 100%;
+	max-width: 75%;
 }
 
 section h3 {
@@ -149,12 +141,13 @@ section .categories {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: var(--lg);
+	width: 100%;
 }
 
 .card {
 	border-radius: var(--md);
 	box-shadow: 0 var(--xs) var(--sm) calc(var(--xs) * -1) var(--black-100);
-	max-width: 15vw;
+	width: 100%;
 	transition: 0.2s ease-in-out;
 }
 
@@ -193,4 +186,65 @@ section .categories {
 .card-details i:hover {
 	scale: 1.25;
 	box-shadow: 0 var(--xs) var(--md) calc(var(--xs) * -1) var(--black-100);
+}
+
+@media (max-width: 1024px) {
+	#main-cards {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--md);
+	}
+}
+
+@media (max-width: 768px) {
+	:root {
+		--header-top: var(--sm);
+	}
+
+	header {
+		width: 95%;
+	}
+
+	.header-user p {
+		display: none;
+	}
+
+	main {
+		margin-top: calc(var(--xxl));
+	}
+
+	section {
+		flex-direction: column;
+	}
+
+	section .categories {
+		border-right: none;
+		border-bottom: 1px solid var(--white-200);
+	}
+
+	section > * {
+		padding: var(--md);
+	}
+}
+
+@media (max-width: 480px) {
+	:root {
+		--header-top: 0px;
+	}
+
+	nav {
+		padding: var(--sm);
+	}
+
+	nav > div {
+		gap: var(--sm);
+	}
+
+	section > * {
+		padding: var(--sm);
+	}
+
+	#main-cards {
+		grid-template-columns: 1fr;
+		gap: var(--sm);
+	}
 }
