@@ -108,3 +108,89 @@ header i {
 		display: none;
 	}
 }
+
+main {
+	display: flex;
+	justify-content: center;
+}
+
+section {
+	display: flex;
+}
+
+section h3 {
+	font-size: var(--lg);
+	margin-bottom: var(--md);
+}
+
+section > * {
+	padding: var(--lg);
+}
+
+section .categories {
+	border-right: 1px solid var(--white-200);
+}
+
+.categories ul {
+	display: flex;
+	flex-direction: column;
+	gap: var(--xs);
+}
+
+.categories li:hover {
+	list-style: circle;
+}
+
+.categories li.selected {
+	list-style: disc;
+}
+
+#main-cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--lg);
+}
+
+.card {
+	border-radius: var(--md);
+	box-shadow: 0 var(--xs) var(--sm) calc(var(--xs) * -1) var(--black-100);
+	max-width: 15vw;
+	transition: 0.2s ease-in-out;
+}
+
+.card > div {
+	padding: var(--md);
+}
+
+.card img {
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
+	width: 100%;
+	border-radius: var(--md) var(--md) 0 0;
+	display: block;
+}
+
+.card:hover {
+	cursor: pointer;
+	scale: 1.0125;
+	box-shadow: 0 var(--xs) var(--md) calc(var(--xs) * -1) var(--black-100);
+}
+
+.card-details {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: var(--sm);
+}
+
+.card-details i {
+	width: var(--md);
+	height: var(--md);
+	transform-origin: right center;
+	transition: 0.2s ease-in-out;
+}
+
+.card-details i:hover {
+	scale: 1.25;
+	box-shadow: 0 var(--xs) var(--md) calc(var(--xs) * -1) var(--black-100);
+}

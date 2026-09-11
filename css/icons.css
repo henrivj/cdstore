@@ -13,3 +13,11 @@
 	mask: url("/images/cart.svg") no-repeat center / contain;
 	cursor: pointer;
 }
+
+.icon-add-to-cart {
+	display: inline-block;
+	background-color: currentColor;
+	-webkit-mask: url("/images/add-to-cart.svg") no-repeat center / contain;
+	mask: url("/images/add-to-cart.svg") no-repeat center / contain;
+	cursor: pointer;
+}
