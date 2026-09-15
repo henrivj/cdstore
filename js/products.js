@@ -120,12 +120,12 @@ const products = [
 	}
 ]
 
-const productsDiv = document.getElementById("main-cards")
+const cardGrid = document.getElementById("card-grid")
 
 function loadProducts() {
 	products.map((p) => {
-		productsDiv.innerHTML += `
-			<a class="card">
+		cardGrid.innerHTML += `
+			<a href="/product.html" class="card">
 				<img src="${p.image}" alt="" />
 				<div>
 					<h4>${p.name}</h4>
